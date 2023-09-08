@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Javascript</title>
+   <script>
+       // Change the styling of HTML elements
+       function myFunct() {
+            // Which part of HTML to affect
+            let text_content = document.getElementById("demo")
+
+            //Replace: 'Hello, World! I am HTML print.' with the below
+            text_content.innerHTML = "<h1>We are the next leader of the world.</h1>";
+
+            // Change the text color
+            text_content.style.color = "blue";
+
+            // Make the text bold
+            text_content.style.fontWeight = "bold";
+
+            // Make the text big
+            text_content.style.fontSize = "100%";
+
+            // Carry the text in the center
+            text_content.style.textAlign = "center"
+       }
+   </script>
+</head>
+
+<body>
+    <!-- HTML writing -->
+
+    <div id="demo">Hello, World! I am HTML print.</div>
+    <br>
+    <!-- Bbutton to change the above text -->
+    <button type="button" onclick="myFunct()">Change the text above</button>
+</body>
+
+</html>

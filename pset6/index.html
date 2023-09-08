@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var dn = 0;
+        var dr = 0;
+        var quotient = [];
+
+        function divide(dn, dr) {
+            if (dn === 0) {
+                if (quotient.length === 0) {
+                    console.log(0)
+                    return
+                } else {
+                    console.log(print(quotient))
+                    return
+                }
+            } else if (dn >= dr) {
+                var qo_dn = findQuotient(dn, dr)
+                dn = qo_dn.dn;
+                quotient.push(qo_dn.q)
+                divide(dn, dr)
+            } else if (dn < dr && dn > 0) {
+                if (!quotient.includes(".")) {
+                    quotient.push(".")
+                    dn *= 10
+                    divide(dn, dr)
+                } else {
+                    dn *= 10;
+                    divide(dn, dr)
+                }
+            }
+        }
+
+        function findQuotient(a, b) {
+            var n = 0;
+            while (a >= b) {
+                a = a - b;
+                n++;
+            }
+            return {
+                "q": n,
+                "dn": a
+            };
+        }
+
+        function print(quotient) {
+            return Number(quotient.join().replaceAll(",", ""))
+        }
+        divide(2, 4)
+    </script>
+</body>
+
+</html>

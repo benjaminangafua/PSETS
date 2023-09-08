@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Nmae</th>
+                <th>Price</th>
+                <th>Shares</th>
+                <th>Transacted</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>{{purchase.symbol}}</td>
+                    <td>{{purchase.name}}</td>
+                    <td>{{purchase.cash}}</td>
+                    <td>{{purchase.share}}</td>
+                    <td>{{purchase.time}}</td>
+                </tr>
+                <tr>
+                    <td>{{sold.symbol}}</td>
+                    <td>{{sold.name}}</td>
+                    <td>{{sold.price}}</td>
+                    <td>{{sold.share}}</td>
+                    <td>{{sold.time}}</td>
+                </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

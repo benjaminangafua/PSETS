@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Shares</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>{{purchase.symbol}}</td>
+                    <td>{{purchase.name}}</td>
+                    <td>{{purchase.price}}</td>
+                    <td>{{purchase.share}}</td>
+                    <td>{{purchase.total}}</td>
+                </tr>
+                <tr>
+                    <td>Cash</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{purchase.cash}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{purchase.balance}}</td>
+                </tr>
+
+        </tbody>
+    </table>
+
+{% endblock %}

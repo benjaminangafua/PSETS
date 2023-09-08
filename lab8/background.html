@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+</head>
+<body>
+    <button id="red">R</button>
+    <button id="green">G</button>
+    <button id="blue">B</button>
+    <script>
+        let body = document.querySelector("body")
+        document.querySelector("#red").onclick= ()=>{
+            body.style.backgroundColor = 'red';
+        };
+        document.querySelector("#green").onclick= ()=>{
+            body.style.backgroundColor = 'green';
+        };
+        document.querySelector("#blue").onclick= ()=>{
+            body.style.backgroundColor = 'blue';
+        };
+    </script>
+</body>
+</html>

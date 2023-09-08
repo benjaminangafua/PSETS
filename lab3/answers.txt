@@ -1,0 +1,13 @@
+sort1 uses:  Bubble sort.
+How do you know?
+Using the time function, bubble sort perform faster when number are already sorted.
+Because it compares two arrays at a time. And swipe them in their order if necessary.
+
+sort2 uses: Merge sort
+How do you know?
+This takes arrays and divide into left and right halves.
+After that, it sort each half recursively and afterward, we merge them.
+
+sort3 uses: Selection sort.
+How do you know?
+Whether sorted or not, selection sort go through the entire  array of numbers one by one.
